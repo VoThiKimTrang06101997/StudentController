@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "06463a50-9d01-4b05-bf3c-5aea1304a840",
+		"name": "Java 17-BaiTap",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17285308"
+	},
+	"item": [
+		{
+			"name": "RequestParam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "vothikimtrang",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "25",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/param/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"param",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PathVariable",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/student/vari/add/vothikimtrang/25",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"vari",
+						"add",
+						"vothikimtrang",
+						"25"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RequestBody",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Võ Thị Kim Trang\",\r\n    \"age\": 25\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/student/requestbody/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"student",
+						"requestbody",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
